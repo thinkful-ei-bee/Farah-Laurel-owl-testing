@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function Participants(props){
+  console.log(props);
   const participants = props.users; 
   const inSessionArr = participants.filter(participant => participant.inSession === true);
   const outOfSessionArr = participants.filter(participant => participant.inSession === false);
@@ -8,10 +9,9 @@ export default function Participants(props){
     const inSessionHTML = inSessionArr.map(user => {
       return (  
         <div className="participant-box">
-          <img src={props.avatar} className="user-logo" alt="logo" />  
-          <span className="participant-name">{props.name}</span>
-          <p>{props.inSession}</p>
-            
+          <img src={user.avatar} className="user-logo" alt="logo" />  
+          <span className="participant-name">{user.name}</span>
+          <p>{user.inSession}</p>  
       </div> 
       )
     })
