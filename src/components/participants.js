@@ -1,9 +1,9 @@
 import React from 'react';
-import STORE from './components/STORE';
 
 export default function Participants(props){
-    const inSessionArr = STORE.participants.filter(participant => participant.inSession === true);
-    const outOfSessionArr = STORE.participants.filter(participant => participant.inSession === false);
+  const participants = props.users; 
+  const inSessionArr = participants.filter(participant => participant.inSession === true);
+  const outOfSessionArr = participants.filter(participant => participant.inSession === false);
 
     const inSessionHTML = inSessionArr.map(user => {
       return (  

@@ -15,18 +15,10 @@ class App extends Component {
     return (
       <main className = 'App'>
         <header className = 'App-header'>
-          <h1> Trelloyes!</h1> 
         </header> 
-        <div className = 'App-list'> 
-        {STORE.map((participant) => ( 
-          <Participants 
-            key = {participant.id}
-            cards = {
-              list.cardIds.map(id => store.allCards[id])
-            }
-            />
-          ))} 
-        </div> 
+        <Participants 
+          users = {STORE.participants} //name of prop is users 
+        /> 
       </main>
       );
     }

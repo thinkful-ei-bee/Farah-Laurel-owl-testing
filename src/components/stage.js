@@ -3,7 +3,7 @@ import STORE from './components/STORE';
 
 
 export default function Stage(props){
-    const userOnStage = STORE.participants.filter(participant => participant.onStage === true);
+    const userOnStage = participants.filter(participant => participant.onStage === true);
 
     const onStageHTML = userOnStage.map(user => {
         return (
