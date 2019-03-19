@@ -1,4 +1,5 @@
-const participants = [
+const STORE = {
+    participants: [
     {
         id: 1,
         name: 'Koren Templeton',
@@ -38,9 +39,9 @@ const participants = [
         inSession: true,
         onStage: true
     }
-]
+],
 
-const chatEvents = [
+ chatEvents: [
     {
         participantId: 3,
         type: 'message',
@@ -88,4 +89,4 @@ const chatEvents = [
         type: 'leave-stage',
         timestamp: 1548852724247
     }
-];
+]};
